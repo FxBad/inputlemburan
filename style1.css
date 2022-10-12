@@ -18,10 +18,16 @@
 }
 
 .sidebar{
-    width: 300px;
+    width: 250px;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
     background: var(--Prussian-Blue);
+}
+
+.sidebar-brand{
+    height: 90px;
+    padding: 5px;
+    color: #fff;
 }
