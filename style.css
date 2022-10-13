@@ -1,61 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-:root{
-    --Prussian-Blue: #1D3557;
-    --Celadon-Blue: #457B9D;
-    --Powder-Blue: #A8DADC;
-    --Honeydew: #F1FAEE;
-    --Imperial-Red: #E63946;
+:root {
+  --Prussian-Blue: #1d3557;
+  --Prussian-Blue-Hover: #162a46;
+  --Celadon-Blue: #457b9d;
+  --Powder-Blue: #a8dadc;
+  --Honeydew: #f1faee;
+  --Imperial-Red: #e63946;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    min-height: 100vh;
-    width: 100%;
+body {
+  min-height: 100vh;
+  width: 100%;
 }
 
-.sidebar{
-    position: fixed;
-    height: 100%;
-    width: 240px;
-    background: var(--Prussian-Blue);
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background: var(--Prussian-Blue);
+  transition: all 0.5s ease;
 }
 
-.sidebar .logo-details{
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
+.sidebar.active {
+  width: 68px;
 }
 
-.sidebar .logo-details i{
-    font-size: 28px;
-    font-weight: 500;
-    color: var(--Prussian-Blue);
-    background: #fff;
-    text-align: center;
-    border-radius: 50%;
-    padding: 2px;
+.sidebar .logo-details {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--Celadon-Blue);
 }
 
-.sidebar .logo-details .logo_name{
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--Honeydew);
-    margin-left: 8px;
+.sidebar .logo-details i {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--Prussian-Blue);
+  background: white;
+  text-align: center;
+  border-radius: 50%;
+  padding: 5px;
+  min-width: 60px;
 }
 
-.sidebar .nav-links{
-    margin-top: 16px;
+.sidebar .logo-details .logo_name {
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  margin-left: 10px;
+  white-space: nowrap;
 }
 
+.sidebar .nav-links li {
+  height: 50px;
+  width: 100%;
+  list-style: none;
+  transition: all 0.2s ease;
+}
 
+.sidebar .nav-links li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
 
+.sidebar .nav-links li a:hover {
+  background: #162a46;
+}
+
+.sidebar .nav-links li a i {
+  min-width: 68px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+.sidebar .nav-links li a .link_name {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Home Section */
+
+.home-section {
+  background: var(--Honeydew);
+  position: relative;
+  min-height: 100vh;
+  left: 300px;
+  width: calc(100% - 300px);
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home-section {
+  width: calc(100% - 68px);
+  left: 68px;
+}
+
+.home-section nav {
+  background: white;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-section nav .sidebar-button {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.home-section nav .sidebar-button i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.home-section nav .profile-details {
+  background: #f5f6fa;
+  display: flex;
+  height: 50px;
+  min-width: 190px;
+  border: 2px solid #efeef1;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 15px 0 2px;
+}
+
+.home-section nav .profile-details img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.home-section nav .profile-details .user_name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+
+.home-section nav .profile-details i {
+  color: #333;
+  font-size: 25px;
+}
