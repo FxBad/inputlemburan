@@ -46,5 +46,11 @@ body{
     border-radius: 50%;
 }
 
+.sidebar .logo-details .logo_name{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--Honeydew);
+}
+
 
 
