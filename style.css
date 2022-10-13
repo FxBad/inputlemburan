@@ -43,6 +43,7 @@ body{
     background: #fff;
     text-align: center;
     border-radius: 50%;
+    padding: 2px;
 }
 
 .sidebar .logo-details .logo_name{
