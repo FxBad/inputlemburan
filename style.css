@@ -41,7 +41,6 @@ body{
     font-weight: 500;
     color: var(--Prussian-Blue);
     background: #fff;
-    min-width: 60px;
     text-align: center;
     border-radius: 50%;
 }
